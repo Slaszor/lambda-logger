@@ -20,7 +20,7 @@ public class EchoServiceLambdaTests {
 
     @Test
     public void handleRequest() {
-        String input = "kle kle";
+        String input = "Another example";
 
         Mockito.when(requestEvent.getBody()).thenReturn(input);
 
