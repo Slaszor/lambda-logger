@@ -8,6 +8,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -20,7 +22,8 @@ public class EchoServiceLambdaTests {
 
     @Test
     public void handleRequest() {
-        String input = "Another example";
+        Integer randomEnding = new Random().nextInt(11);
+        String input = "rnd: " + randomEnding;
 
         Mockito.when(requestEvent.getBody()).thenReturn(input);
 

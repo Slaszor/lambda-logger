@@ -17,7 +17,7 @@ public class EchoServiceLambda implements RequestHandler<APIGatewayProxyRequestE
     public RequestResponse handleRequest(APIGatewayProxyRequestEvent input, Context context) {
         String inputBody = input.getBody();
 
-        LOG.info(" !! SUCCESS !! - input was: " + inputBody);
+        LOG.info("org.apache.logging.log4j - " + inputBody);
 
         Map<String, String> headers = new HashMap<>();
         headers.put("version", "0.0.1");
